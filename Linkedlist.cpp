@@ -47,7 +47,6 @@ void List::displayList()
 
 int main() {
     // Write C++ code here
-    //std::cout << "Try programiz.pro"<<endl;
     
     List obj;
     obj.addNode(1);
