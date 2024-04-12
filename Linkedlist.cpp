@@ -14,9 +14,21 @@ class List{
     
     public:
         List():head(NULL){}
+	~List();
         void addNode(int data);
         void displayList();
 };
+
+List::~List()
+{
+    struct node *headptr;
+    while(head != NULL )
+    {
+         headptr = head;
+	 head = head->next;
+	 delete headptr;
+    }
+}
 
 void List::addNode(int data)
 {
