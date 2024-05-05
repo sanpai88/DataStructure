@@ -89,7 +89,7 @@ class BreakObserver:public Observer{
     public:
 
     BreakObserver(Car *obj):Observer(obj){}
-    
+
     void update()
     {
         int pos = getCar()->getPosition();
