@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdint.h>
 
+uint32_t turnRightMostBit(uint32_t in)
+{
+     return (in & ~(1 << 0));
+}
+
 uint32_t swapBits(uint32_t in, uint32_t pos1, uint32_t pos2)
 {
     uint32_t mask = 0;
@@ -21,4 +26,7 @@ int main()
     uint32_t op = swapBits(3,1,2);
     printf("after swap:%u \n",op);
 
+    printf("Turn rightmost bit : %u \n",turnRightMostBit(15));
+    printf("Turn rightmost bit : %u \n",turnRightMostBit(35));
+    return 0;
 }
